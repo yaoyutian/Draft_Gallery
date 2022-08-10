@@ -1,6 +1,6 @@
 {
   "type": "module",
   "dependencies": {
-    "ws":"latest"
+    "ws": "^8.8.1"
   }
 }
