@@ -1,16 +1,17 @@
-import WebSocket from 'ws';
+import {WebSocket} from 'ws';
 
 const ws = new WebSocket('ws://localhost:8080');
 
-ws.on('open', function open() {
-  ws.send('bustate');
-  ws.send('busdata');
-});
+// ws.on('open', function open() {
+//   console.log('connecting wss');
+//   //ws.send('bustate');
+//   //ws.send('busdata');
+// });
 
 ws.on('message', function message(data) {
   console.log('received: %s', data);
 });
 
-
-
-  //socket.connect();
+ws.on('error',(err)=>{
+  console.log(err);
+})
